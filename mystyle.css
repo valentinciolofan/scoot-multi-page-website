@@ -33,6 +33,10 @@ p {
     line-height: 25px;
     font-family: "Lexend Deca Regular", sans-serif;
 }
+small, strong {
+    font-family: "Space Mono Bold", monospace;
+    text-align: center;
+}
 header {
     position: absolute;
     top: 0%;
@@ -62,9 +66,9 @@ nav {
     color: #fff;
     border: 0px;
     font-family: "Space Mono", monospace;
+    border: 1px solid #FCB72B;
 }
 .cta-header-btn:hover {
-    border: 1px solid #FCB72B;
     color: #FCB72B;
     background-color: #fff;
     transition: 0.4s;
@@ -112,13 +116,15 @@ nav {
 .steps-columns {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 48px;
 }
 .steps-col {
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    max-width: 350px;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    max-width: 300px;
 }
 .steps-col span {
     width: 1rem;
@@ -133,4 +139,94 @@ nav {
 .steps-section-svg {
     width: 2em;
     height: 2em;
+}
+
+/* TELEMETRY SECTION STYLE */
+.telemetry-image {
+    border-radius: 50%;
+    margin-bottom: 56px;
+    align-items: center;
+}
+.telemetry-section {
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.telemetry-columns {
+    display: flex;
+    justify-content: center;
+}
+.telemetry-col {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    text-align: center;
+    gap: 40px;
+}
+
+
+/* sign up section */
+.sign-up-section {
+    background-image: url("./images/Mask.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 55%;
+    color: #fff;
+    padding: 80px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.sign-up-col {
+    display: flex;
+    gap: 13px;
+}
+.sign-up-option {
+    display: flex;
+    background-color: #E5ECF4;
+    border-radius: 4px;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    color: #495567;
+    max-width: 180px;
+}
+.sign-up-info {
+    display: flex;
+    flex-direction: column;
+}
+footer {
+    background-color: #333A44;
+    padding: 20px;
+}
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+}
+.footer-col1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+.footer-links {
+    display: flex;
+    gap: 32px;
+}
+.footer-links a {
+    color: #939CAA;
+    font-family: "Space Mono Bold", monospace;
+    text-decoration: none;
+    font-weight: 600;
+} 
+.footer-col2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
 }
