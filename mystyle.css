@@ -1,48 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
 }
-html {
 
-}
-body {
+html {}
 
-}
+body {}
+
 h1 {
     font-size: 3.5rem;
     letter-spacing: -2.5;
     line-height: 56px;
     font-family: "Space Mono Bold", monospace;
 }
+
 h2 {
     font-size: 3rem;
     line-height: 48px;
     letter-spacing: -2.14;
     font-family: "Space Mono Bold", monospace;
 }
+
 h3 {
     font-size: 2.5rem;
     line-height: 48px;
     letter-spacing: -1.79;
     font-family: "Space Mono Bold", monospace;
 }
+
 h4 {
     font-size: 1.5rem;
     line-height: 28px;
     letter-spacing: -1.07;
     font-family: "Space Mono Bold", monospace;
 }
+
 p {
     font-size: 15px;
     line-height: 25px;
     font-family: "Lexend Deca", sans-serif;
 }
-small, strong {
+
+small,
+strong {
     font-family: "Space Mono Bold", monospace;
     text-align: center;
 }
+
 header {
     position: absolute;
     top: 0%;
@@ -52,20 +59,24 @@ header {
     height: 60px;
     width: 100%;
 }
+
 nav {
     display: none;
 
 }
+
 .navbar-logo-and-links {
     display: flex;
     justify-content: center;
     flex-grow: 1;
 }
+
 #hamburger {
     background-color: #fff;
     cursor: pointer;
     border: 0px;
 }
+
 .cta-header-btn {
     background-color: #FCB72B;
     padding: 16px 32px;
@@ -74,6 +85,7 @@ nav {
     font-family: "Space Mono", monospace;
     border: 1px solid #FCB72B;
 }
+
 .cta-header-btn:hover {
     color: #FCB72B;
     background-color: #fff;
@@ -89,6 +101,7 @@ nav {
     background-position: 55%;
     background-image: url("/images/landingpage-image.jpg");
 }
+
 .overlay-hero-page {
     background-color: rgba(73, 85, 103, 0.7);
     height: 100vh;
@@ -96,6 +109,7 @@ nav {
     justify-content: center;
     align-items: center;
 }
+
 .hero-page-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -105,6 +119,7 @@ nav {
     align-items: center;
     text-align: center;
 }
+
 .arrow-element {
     position: absolute;
     right: 70%;
@@ -119,11 +134,13 @@ nav {
     display: flex;
     justify-content: center;
 }
+
 .steps-columns {
     display: flex;
     flex-direction: column;
     gap: 48px;
 }
+
 .steps-col {
     display: flex;
     flex-direction: column;
@@ -132,6 +149,7 @@ nav {
     gap: 24px;
     max-width: 300px;
 }
+
 .steps-col span {
     width: 1rem;
     height: 1rem;
@@ -142,6 +160,7 @@ nav {
     align-items: center;
     justify-content: center;
 }
+
 .steps-section-svg {
     width: 2em;
     height: 2em;
@@ -153,24 +172,28 @@ nav {
     margin-bottom: 56px;
     align-items: center;
 }
+
 .row-section {
     margin: 200px 0px;
     display: flex;
     justify-content: center;
     text-align: center;
 }
+
 .row-columns-image-to-right {
     display: flex;
     justify-content: center;
     flex-direction: column-reverse;
     align-items: center;
 }
+
 .row-columns-image-to-left {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 .row-col {
     display: flex;
     flex-direction: column;
@@ -194,10 +217,12 @@ nav {
     align-items: center;
     gap: 40px;
 }
+
 .sign-up-col {
     display: flex;
     gap: 13px;
 }
+
 .sign-up-option {
     display: flex;
     background-color: #E5ECF4;
@@ -209,35 +234,42 @@ nav {
     color: #495567;
     max-width: 180px;
 }
+
 .sign-up-info {
     display: flex;
     flex-direction: column;
 }
+
 footer {
     background-color: #333A44;
     padding: 20px;
 }
+
 .footer-wrapper {
     display: flex;
     justify-content: space-between;
 
 }
+
 .footer-col1 {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 60px;
 }
+
 .footer-links {
     display: flex;
     gap: 32px;
 }
+
 .footer-links a {
     color: #939CAA;
     font-family: "Space Mono Bold", monospace;
     text-decoration: none;
     font-weight: 600;
-} 
+}
+
 .footer-col2 {
     display: flex;
     justify-content: center;
@@ -251,8 +283,9 @@ footer {
     background: url("./images/bg-about.png") no-repeat;
     color: #fff;
     height: 30vh;
-    background-size: cover;    
+    background-size: cover;
 }
+
 .overlay-about-page {
 
     background-color: rgba(73, 85, 103, 0.7);
@@ -261,12 +294,14 @@ footer {
     align-items: center;
     min-height: 100%;
 }
+
 /* our values style */
 .our-values {
     margin-top: 150px;
     display: flex;
     justify-content: center;
 }
+
 .our-values-wrapper {
     display: flex;
     flex-direction: column;
@@ -274,11 +309,13 @@ footer {
     justify-content: center;
     gap: 100px;
 }
+
 .our-values-columns {
     display: flex;
     flex-direction: column;
     gap: 48px;
 }
+
 .our-values-col {
     display: flex;
     flex-direction: column;
@@ -287,6 +324,7 @@ footer {
     gap: 24px;
     max-width: 300px;
 }
+
 .our-values-col span {
     width: 1rem;
     height: 1rem;
@@ -297,28 +335,106 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
 .our-values-section-svg {
     width: 2em;
     height: 2em;
 }
 
 
+/* faq section style */
+.faq-section {
+    margin: 120px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    max-width: 310px;
+}
+
+.faq-section-columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+
+.faq-section-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.faq-questions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.accordion-faq {
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F5F9;
+    padding: 25px 40px;
+}
+
+.accordion-faq-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.faq-down-slide {
+    max-height: 0;
+    /* Set initial height to 0 */
+    transition: max-height 0.4s ease-in-out;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.faq-down-slide.is-open {
+    max-height: 150px;
+    /* Show the content when class is present */
+}
+
+.faq-arrow {
+    transform: rotate(180deg);
+}
+
+.question-category {
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
 
 
 
 @media screen and (min-width: 1024px) {
-    .row-columns-image-to-right, .row-columns-image-to-left {
+
+    .row-columns-image-to-right,
+    .row-columns-image-to-left {
         flex-direction: row;
         gap: 220px;
     }
+
     .row-col {
         justify-content: center;
         max-width: 450px;
         text-align: start;
     }
+
     .row-image {
         margin: 0px;
     }
+
     .steps-columns {
         flex-direction: row;
     }
@@ -326,5 +442,19 @@ footer {
     /* about page */
     .our-values-columns {
         flex-direction: row;
+    }
+
+    .faq-section-wrapper {
+        max-width: 800px;
+
+    }
+
+    .faq-section-column {
+        flex-direction: row;
+        gap: 80px;
+    }
+
+    .accordion-faq {
+        min-width: 650px;
     }
 }
