@@ -1,8 +1,10 @@
-const faqArrow = document.querySelectorAll(".faq-arrow");
+const accordion = document.querySelectorAll(".accordion-faq");
 
-faqArrow.forEach(arrow => {
-  arrow.addEventListener("click", () => {
-    const faqSlideDown = arrow.parentElement.parentElement.children[1];
+
+
+accordion.forEach(accordion => {
+  accordion.addEventListener("click", () => {
+    const faqSlideDown = accordion.children[1];
     faqSlideDown.classList.toggle("is-open");
   });
 });
