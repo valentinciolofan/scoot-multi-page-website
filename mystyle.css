@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
+/* 450px for columns  and probably 1200/1400px max width for sections*/
 * {
     margin: 0px;
     padding: 0px;
@@ -62,33 +62,37 @@ header {
     position: absolute;
     top: 0%;
     background-color: #fff;
-    display: flex;
-    align-items: center;
-    height: 60px;
     width: 100%;
+    padding: 20px 0px;
 }
+
 .header-wrapper {
-    margin: 0px 300px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 0px 20px;
 }
+
 a {
     text-decoration: none;
 }
 
-nav {
-    display: none;
+.navbar {
+    max-height: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: max-height 0.5s ease-in-out;
 }
-
-nav a {
-    color: #939CAA;
-
+.navbar.is-open {
+    max-height: 150px;
 }
-
 .navbar-logo-and-links {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     flex-grow: 1;
+    gap: 20px;
 }
 
 #hamburger {
@@ -96,7 +100,9 @@ nav a {
     cursor: pointer;
     border: 0px;
 }
-
+#headerCTA {
+    display: none;
+}
 .cta-btn {
     background-color: #FCB72B;
     padding: 16px 32px;
@@ -122,7 +128,7 @@ nav a {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 55%;
+    background-position: center center;
     background-image: url("/images/landingpage-image.jpg");
 }
 
@@ -133,9 +139,11 @@ nav a {
     justify-content: center;
     align-items: center;
 }
+
 .hero-page-wrapper * {
     color: #fff;
 }
+
 .hero-page-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -159,31 +167,27 @@ nav a {
     margin-top: 150px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .steps-columns {
     display: flex;
     flex-direction: column;
-    margin: 0px 300px;
     gap: 48px;
 }
 
 .steps-col {
     display: flex;
-    position: relative;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    max-width: 600px;
-    gap: 24px;
+    max-width: 310px;
+    gap: 48px;
 }
 
 .steps-col-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: start;
+    align-items: center;
+    text-align: center;
     gap: 27px;
 }
 
@@ -208,35 +212,39 @@ nav a {
     border-radius: 50%;
     margin-bottom: 56px;
     align-items: center;
+    max-width: 100%;
+    height: auto;
 }
-
 .row-section {
     margin: 120px 0px;
+    display: flex;
+    justify-content: center;
 }
 
 .row-columns-image-to-right {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 55px;
     flex-direction: column-reverse;
-    margin: 0px 300px;
     align-items: center;
 }
 
 .row-columns-image-to-left {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 55px;
     align-items: center;
     flex-direction: column;
-    margin: 0px 300px;
+    margin: 0px 15px;
 }
 
 .row-col {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 300px;
     text-align: center;
     gap: 40px;
+    max-width: 310px;
 }
 
 
@@ -281,6 +289,8 @@ nav a {
 footer {
     background-color: #333A44;
     padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .footer-wrapper {
@@ -288,7 +298,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin: 0px 300px;
+    gap: 85px;
 }
 
 .footer-col1 {
@@ -453,7 +463,6 @@ footer {
 
 .faq-down-slide {
     max-height: 0;
-    /* Set initial height to 0 */
     transition: max-height 0.4s ease-in-out;
     max-width: 100%;
     overflow: hidden;
@@ -461,7 +470,6 @@ footer {
 
 .faq-down-slide.is-open {
     max-height: 150px;
-    /* Show the content when class is present */
 }
 
 .faq-arrow {
@@ -519,13 +527,16 @@ footer {
     gap: 120px;
     margin: 120px 0px;
 }
+
 .locations-wrapper {
     margin: 0px 300px;
 }
+
 .locations-img {
     max-width: 100%;
     height: auto;
 }
+
 .locations-cta {
     display: flex;
     justify-content: space-between;
@@ -533,30 +544,37 @@ footer {
     gap: 30px;
 }
 
-
-
 @media screen and (min-width: 768px) {
+    #headerCTA {
+        display: block;
+    }
     .steps-col {
         flex-direction: row;
+        align-items: flex-start;
+        max-width: 570px;
+        gap: 80px;
     }
-
-    .steps-col:before {
-        content: '';
-        height: 200%;
-        width: 15px;
-        background-color: #E5ECF4;
-        position: absolute;
-        top: -140%;
-        left: 4%;
-        z-index: -1;
+    .steps-col-content {
+        align-items: flex-start;
+        text-align: start;
+        max-width: 400px;
+        flex-grow: 1;
     }
-
+    .row-col {
+        max-width: 570px;
+    }
+    .row-columns-image-to-left, .row-columns-image-to-right {
+        margin: 0px;
+        max-width: 570px;
+    }
     .footer-wrapper {
         flex-direction: row;
     }
 
     .footer-col1 {
         flex-direction: row;
+        max-width: 415px;
+        gap: 60px;
     }
 
     .footer-col2 {
@@ -567,10 +585,21 @@ footer {
         flex-direction: row;
     }
 }
-
 @media screen and (min-width: 1024px) {
+    #hamburger {
+        display: none;
+    }
+    .navbar {
+        display: block;
+    }
+    .navbar-logo-and-links {
+        gap: 60px;
+        justify-content: flex-start;
+    }
     .overlay-hero-page {
         justify-content: flex-start;
+    }
+    .header-wrapper {
     }
     .hero-page-wrapper {
         justify-content: flex-start;
@@ -580,30 +609,33 @@ footer {
         align-items: flex-start;
         flex-direction: column;
         text-align: start;
+        gap: 40px;
     }
-    .steps-col:before {
-        height: 0;
-        width: 0;
+    .steps-columns {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1000px;
+        gap: 30px;
     }
     .row-columns-image-to-right,
     .row-columns-image-to-left {
         flex-direction: row;
+        justify-content: space-between;
         gap: 220px;
+        max-width: 1000px;
+        flex-grow: 1;
     }
+
     .row-col {
         justify-content: center;
         align-items: flex-start;
-        max-width: 450px;
         text-align: start;
+        max-width: 450px;
     }
-
     .row-image {
         margin: 0px;
     }
 
-    .steps-columns {
-        flex-direction: row;
-    }
     /* about page */
     .our-values-columns {
         flex-direction: row;
