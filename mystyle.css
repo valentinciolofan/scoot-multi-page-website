@@ -283,13 +283,13 @@ a {
 }
 .sign-up-section h2 {
     color: #fff;
+    text-align: center;
 }
 .sign-up-col {
     display: flex;
     flex-direction: column;
     gap: 13px;
 }
-
 .sign-up-option {
     display: flex;
     background-color: #E5ECF4;
@@ -302,19 +302,16 @@ a {
     max-width: 180px;
     cursor: pointer;
 }
-
 .sign-up-info {
     display: flex;
     flex-direction: column;
 }
-
 footer {
     background-color: #333A44;
     padding: 20px;
     display: flex;
     justify-content: center;
 }
-
 .footer-wrapper {
     display: flex;
     flex-direction: column;
@@ -323,7 +320,6 @@ footer {
     gap: 85px;
     flex-grow: 1;
 }
-
 .footer-col1 {
     display: flex;
     flex-direction: column;
@@ -331,50 +327,42 @@ footer {
     align-items: center;
     gap: 40px;
 }
-
 .footer-links {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
 }
-
 .footer-links a {
     color: #939CAA;
     font-family: "Space Mono Bold", monospace;
     text-decoration: none;
     font-weight: 600;
 }
-
 .footer-links a:hover {
     color: #FCB72B;
 }
-
 .footer-col2 {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 24px;
 }
-
 .footer-col2 svg {
     color: #FCB72B;
 }
-
 .footer-col2 *:hover {
     cursor: pointer;
     color: #fff;
 }
-
 /* ABOUT PAGE STYLE */
 .about-cover {
     background: url("./images/bg-about.png") no-repeat;
     color: #fff;
-    height: 60vh;
+    height: 200px;
     background-size: cover;
     background-position: center center;
 }
-
 .overlay-cover-page {
     background-color: rgba(73, 85, 103, 0.7);
     display: flex;
@@ -526,35 +514,43 @@ footer {
 .careers-section {
     display: flex;
     justify-content: center;
-
-    margin: 120px 120px;
+    margin: 120px 0px;
 }
-
 .careers-wrapper {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     gap: 24px;
 }
-
 .career {
     background-color: #F2F5F9;
     display: flex;
-    justify-content: space-between;
-    padding: 35px 40px;
-    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 10px 5px;
+    max-width: 310px;
 }
 
 /* LOCATIONS PAGE STYLE */
+.location-cover {
+        background: url("./images/locations-cover.svg") no-repeat;
+        color: #fff;
+        height: 200px;
+        background-size: cover;
+        background-position: center center;
+}
 .locations-section {
     display: flex;
-    flex-direction: column;
-    gap: 120px;
-    margin: 120px 0px;
+    justify-content: center;
+    margin: 72px 0px;
 }
 
 .locations-wrapper {
-    margin: 0px 300px;
+    max-width: 310px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .locations-img {
@@ -564,11 +560,14 @@ footer {
 
 .locations-cta {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    gap: 30px;
+    text-align: center;
+    gap: 32px;
 }
-
+.cta-btn {
+    min-width: 180px;
+}
 @media screen and (min-width: 768px) {
     #headerCTA {
         display: block;
@@ -601,6 +600,22 @@ footer {
     }
     .faq-section-wrapper {
         max-width: 570px;
+    }
+
+    /* location page media style */
+    .locations-wrapper {
+        max-width: 700px;
+        gap: 64px;
+    }
+    /* careers page media style */
+    .careers-wrapper {
+        max-width: 770px;
+    }
+    .career {
+        min-width: 700px;
+        justify-content: space-between;
+        text-align: start;
+        padding: 20px;
     }
     .sign-up-col {
         flex-direction: row;
@@ -704,6 +719,22 @@ footer {
     }
     .accordion-faq {
         min-width: 650px;
+    }
+
+    /* location page media style 1024px*/
+    .locations-wrapper {
+        max-width: 1000px;
+    }
+    .locations-cta {
+        flex-direction: row;
+        align-items: center;
+        flex-grow: 1;
+    }
+    .careers-wrapper {
+        max-width: 1000px;
+    }
+    .career {
+        min-width: 1000px;
     }
     .footer-wrapper {
         max-width: 1000px;

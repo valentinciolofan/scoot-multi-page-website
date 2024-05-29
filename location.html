@@ -1,114 +1,117 @@
 <!DOCTYPE html>
-
+<html>
 <head>
     <title>Locations | Scoot</title>
     <link rel="stylesheet" href="mystyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
     <header>
-        <button type="button" id="hamburger"><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
-                viewBox="0 0 24 24">
-                <path fill="#fcb72b" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
-            </svg>
-        </button>
-        <div class="navbar-logo-and-links">
-            <div class="logo">
-                <a href="index.html" class="scoot-svg"><img src="/images/scoot.svg"></a>
+        <div class="header-wrapper">
+            <button type="button" id="hamburger"><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                    viewBox="0 0 24 24">
+                    <path fill="#fcb72b" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
+                </svg>
+            </button>
+            <div class="navbar-logo-and-links">
+                <div class="logo">
+                    <a href="index.html" class="scoot-svg"><img src="/images/scoot.svg"></a>
+                </div>
+                <nav class="navbar">
+                    <a href="about.html">About</a>
+                    <a href="location.html">Location</a>
+                    <a href="careers.html">Careers</a>
+                </nav>
             </div>
-            <nav class="navbar">
-                <a href="about.html">About</a>
-                <a href="location.html">Location</a>
-                <a href="careers.html">Careers</a>
-            </nav>
+            <button type="button" value="getscootin" id="headerCTA" class="cta-btn">Get Scootin</button>
         </div>
-    </header>
+    </header> 
     <!-- about cover -->
-    <div class="about-cover">
-        <div class="overlay-about-page">
+      <div class="location-cover">
+        <div class="overlay-cover-page">
             <h2>Locations</h2>
         </div>
     </div>
     <!--locations -->
     <section class="locations-section">
         <div class="locations-wrapper">
-            <img class="locations-img" src="/images/locations.png" alt="locations">
-
+            <div>
+                <img class="locations-img" src="/images/locations.png" alt="locations">
+            </div>
             <div class="locations-cta">
                 <h2>Your city not listed?</h2>
-                <p>If you’d like to see Scoot in your hometown, be sure to let us know. We track requests and plan
+                <p class="locations-paragraph">If you’d like to see Scoot in your hometown, be sure to let us know. We track requests and plan
                     launches based on demand. Feel free to message us by clicking the link or messaging us on social.
                 </p>
-                <button type="button" value="messageus" class="cta-btn">Message Us</button>
+                <button type="button" value="messageus" class="cta-btn locations-page">Message Us</button>
             </div>
         </div>
     </section>
 
     <!-- end of locations -->
-    <!-- sign up options and footer-->
-    <section class="sign-up-section">
-        <h2>Sign up and Scoot off today</h2>
-        <div class="sign-up-col">
-            <div class="sign-up-option">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
-                    <path fill="#495567"
-                        d="M17.05 20.28c-.98.95-2.05.8-3.08.35c-1.09-.46-2.09-.48-3.24 0c-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8c1.18-.24 2.31-.93 3.57-.84c1.51.12 2.65.72 3.4 1.8c-3.12 1.87-2.38 5.98.48 7.13c-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25c.29 2.58-2.34 4.5-3.74 4.25" />
-                </svg>
-                <div class="sign-up-info">
-                    <small>Available on the</small>
-                    <strong>AppStore</strong>
-                </div>
-            </div>
-
-            <div class="sign-up-option">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
-                    <path fill="#495567"
-                        d="m22.018 13.298l-3.919 2.218l-3.515-3.493l3.543-3.521l3.891 2.202a1.49 1.49 0 0 1 0 2.594M1.337.924a1.5 1.5 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087zm12.207 10.065l3.258-3.238L3.45.195a1.47 1.47 0 0 0-.946-.179zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54z" />
-                </svg>
-                <div class="sign-up-info">
-                    <small>Get it on</small>
-                    <strong>GooglePlay</strong>
-                </div>
+   <!-- sign up options and footer-->
+   <section class="sign-up-section">
+    <h2>Sign up and Scoot off today</h2>
+    <div class="sign-up-col">
+        <div class="sign-up-option">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                <path fill="#495567"
+                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35c-1.09-.46-2.09-.48-3.24 0c-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8c1.18-.24 2.31-.93 3.57-.84c1.51.12 2.65.72 3.4 1.8c-3.12 1.87-2.38 5.98.48 7.13c-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25c.29 2.58-2.34 4.5-3.74 4.25" />
+            </svg>
+            <div class="sign-up-info">
+                <small>Available on the</small>
+                <strong>AppStore</strong>
             </div>
         </div>
-    </section>
 
-    <footer>
-        <div class="footer-wrapper">
-            <div class="footer-col1">
-                <a href="index.html" class="scoot-svg"><img src="/images/scoot-white.svg"></a>
-
-
-
-                <div class="footer-links">
-                    <a href="about.html">About</a>
-                    <a href="location.html">Location</a>
-                    <a href="careers.html">Careers</a>
-                </div>
+        <div class="sign-up-option">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                <path fill="#495567"
+                    d="m22.018 13.298l-3.919 2.218l-3.515-3.493l3.543-3.521l3.891 2.202a1.49 1.49 0 0 1 0 2.594M1.337.924a1.5 1.5 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087zm12.207 10.065l3.258-3.238L3.45.195a1.47 1.47 0 0 0-.946-.179zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54z" />
+            </svg>
+            <div class="sign-up-info">
+                <small>Get it on</small>
+                <strong>GooglePlay</strong>
             </div>
+        </div>
+    </div>
+</section>
 
-            <div class="footer-col2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                    <path fill="#fcb72b" fill-rule="evenodd"
+<footer>
+    <div class="footer-wrapper">
+        <div class="footer-col1">
+            <a href="index.html" class="scoot-svg"><img src="/images/scoot-white.svg"></a>
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="location.html">Location</a>
+                <a href="careers.html">Careers</a>
+            </div>
+        </div>
+
+        <div class="footer-col2">
+            <a href="https://www.facebook.com/"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                    viewBox="0 0 24 24">
+                    <path fill="currentColor" fill-rule="evenodd"
                         d="M15.725 22v-7.745h2.6l.389-3.018h-2.99V9.31c0-.874.243-1.47 1.497-1.47h1.598v-2.7a21.391 21.391 0 0 0-2.33-.12c-2.304 0-3.881 1.407-3.881 3.99v2.227H10v3.018h2.607V22H3.104C2.494 22 2 21.506 2 20.896V3.104C2 2.494 2.494 2 3.104 2h17.792C21.506 2 22 2.494 22 3.104v17.792c0 .61-.494 1.104-1.104 1.104z" />
                 </svg>
+            </a>
+
+            <a href="https://instagram.com/">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
-                    <path fill="#fcb72b"
+                    <path fill="currentColor"
                         d="M8 0C5.829 0 5.556.01 4.703.048C3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7C.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297c.04.852.174 1.433.372 1.942c.205.526.478.972.923 1.417c.444.445.89.719 1.416.923c.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417c.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046c.78.035 1.204.166 1.486.275c.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485c.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598c-.28.11-.704.24-1.485.276c-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598a2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485c-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486c.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276c.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92a.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217a4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334a2.667 2.667 0 0 1 0-5.334" />
                 </svg>
+            </a>
+            <a href="https://twitter.com/">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                    <g fill="#fcb72b">
-                        <path d="M1 2h2.5L18.5 22h-2.5z" />
-                        <path d="M5.5 2h2.5L23 22h-2.5z" />
-                        <path d="M3 2h5v2h-5z" />
-                        <path d="M16 22h5v-2h-5z" />
-                        <path d="M18.5 2h3.5L5 22h-3.5z" />
-                    </g>
+                    <path fill="currentColor"
+                        d="M8 2H1l8.26 11.015L1.45 22H4.1l6.388-7.349L16 22h7l-8.608-11.478L21.8 2h-2.65l-5.986 6.886zm9 18L5 4h2l12 16z" />
                 </svg>
-            </div>
+            </a>
         </div>
-    </footer>
-    <!-- end of sign up options and footer-->
+    </div>
+</footer>
+<!-- end of sign up options and footer-->
+<script src="script.js"></script>
 </body>
-
 </html>
