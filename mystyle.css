@@ -59,8 +59,9 @@ strong {
 }
 
 header {
-    position: absolute;
+    position: sticky;
     top: 0%;
+    z-index: 999;
     background-color: #fff;
     width: 100%;
     padding: 20px 0px;
@@ -68,7 +69,8 @@ header {
 
 .header-wrapper {
     display: flex;
-    justify-content: center;
+    align-items: first baseline;
+    max-width: 1200px;
     padding: 0px 20px;
 }
 
@@ -80,8 +82,17 @@ a {
     max-height: 0px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
     transition: max-height 0.5s ease-in-out;
+}
+.navbar a {
+    color: #939CAA;
+    font-family: "Space Mono Bold", monospace;
+}
+.navbar a:hover {
+    color: #FCB72B;
+    transition: color 0.2s ease-in-out;
 }
 .navbar.is-open {
     max-height: 150px;
@@ -93,6 +104,9 @@ a {
     align-items: center;
     flex-grow: 1;
     gap: 20px;
+    max-height: 150px;
+    transition: max-height 0.4s ease-in-out;
+    overflow: hidden;
 }
 
 #hamburger {
@@ -125,7 +139,7 @@ a {
 
 /* hero page style */
 .hero-page {
-    height: 100vh;
+    height: 90vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -134,7 +148,7 @@ a {
 
 .overlay-hero-page {
     background-color: rgba(73, 85, 103, 0.7);
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,15 +159,20 @@ a {
 }
 
 .hero-page-wrapper {
+    max-width: 310px;
     display: flex;
-    flex-wrap: wrap;
+    gap: 24px;
     justify-content: center;
-    gap: 20px;
     align-items: center;
-    margin: 0px 300px;
     text-align: center;
 }
-
+.hero-page-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
 .arrow-element {
     position: absolute;
     right: 70%;
@@ -212,7 +231,7 @@ a {
     border-radius: 50%;
     margin-bottom: 56px;
     align-items: center;
-    max-width: 100%;
+    max-width: 310px;
     height: auto;
 }
 .row-section {
@@ -262,9 +281,12 @@ a {
     align-items: center;
     gap: 40px;
 }
-
+.sign-up-section h2 {
+    color: #fff;
+}
 .sign-up-col {
     display: flex;
+    flex-direction: column;
     gap: 13px;
 }
 
@@ -299,6 +321,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     gap: 85px;
+    flex-grow: 1;
 }
 
 .footer-col1 {
@@ -347,31 +370,33 @@ footer {
 .about-cover {
     background: url("./images/bg-about.png") no-repeat;
     color: #fff;
-    height: 30vh;
+    height: 60vh;
     background-size: cover;
+    background-position: center center;
 }
 
-.overlay-about-page {
-
+.overlay-cover-page {
     background-color: rgba(73, 85, 103, 0.7);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100%;
 }
-
+.overlay-cover-page h2 {
+    color: #fff;
+}
 /* our values style */
 .our-values {
     margin-top: 120px;
 }
 
 .our-values-wrapper {
-    margin: 0px 300px;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 100px; */
+    gap: 100px;
 }
 
 .our-values-columns {
@@ -386,7 +411,7 @@ footer {
     align-items: center;
     text-align: center;
     gap: 24px;
-    max-width: 300px;
+    max-width: 310px;
 }
 
 .our-values-col span {
@@ -415,12 +440,11 @@ footer {
 }
 
 .faq-section-wrapper {
-    margin: 0px 300px;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 60px;
-    max-width: 310px; */
+    max-width: 310px;
 }
 
 .faq-section-columns {
@@ -448,6 +472,7 @@ footer {
     flex-direction: column;
     background-color: #F2F5F9;
     padding: 25px 40px;
+    max-width: 310px;
 }
 
 .accordion-faq:hover {
@@ -548,6 +573,9 @@ footer {
     #headerCTA {
         display: block;
     }
+    .hero-page-wrapper {
+        max-width: 570px;
+    }
     .steps-col {
         flex-direction: row;
         align-items: flex-start;
@@ -566,6 +594,16 @@ footer {
     .row-columns-image-to-left, .row-columns-image-to-right {
         margin: 0px;
         max-width: 570px;
+    }
+
+    .our-values-col {
+        max-width: 450px;
+    }
+    .faq-section-wrapper {
+        max-width: 570px;
+    }
+    .sign-up-col {
+        flex-direction: row;
     }
     .footer-wrapper {
         flex-direction: row;
@@ -590,19 +628,30 @@ footer {
         display: none;
     }
     .navbar {
-        display: block;
+        flex-direction: row;
     }
     .navbar-logo-and-links {
         gap: 60px;
+        flex-direction: row;
         justify-content: flex-start;
-    }
-    .overlay-hero-page {
-        justify-content: flex-start;
-    }
-    .header-wrapper {
     }
     .hero-page-wrapper {
+        min-width: 1000px;
         justify-content: flex-start;
+    }
+    header {
+        display: flex;
+        justify-content: center;
+    }
+    .header-wrapper {
+        align-items: center;
+        padding: 0px;
+        flex-grow: 1;
+        max-width: 1000px;
+    }
+    .hero-page-col {
+        max-width: 500px;
+        align-items: flex-start;
         text-align: start;
     }
     .steps-col {
@@ -639,23 +688,24 @@ footer {
     /* about page */
     .our-values-columns {
         flex-direction: row;
-    }
+        max-width: 1000px;
 
-    .our-values-columns {
-        flex-direction: row;
     }
-
+    .our-values-wrapper {
+        justify-content: center;
+        align-items: center;
+    }
     .faq-section-wrapper {
         max-width: 800px;
-
     }
-
     .faq-section-column {
         flex-direction: row;
         gap: 80px;
     }
-
     .accordion-faq {
         min-width: 650px;
+    }
+    .footer-wrapper {
+        max-width: 1000px;
     }
 }
